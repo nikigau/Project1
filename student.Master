@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="student.master.cs" Inherits="WebApplication1.student" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="style4.css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>Online Student Complaint Handling Portal </h1>
+            <br />
+            <hr />
+            <br />
+            <ul>
+                <li>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/stucomplain.aspx"> <h3>Complaint Form </h3></asp:LinkButton>
+                </li>
+                <li>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/compalinstatus.aspx"><h3> Complaint Status </h3></asp:LinkButton>
+                </li>
+                <li>
+                    <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/default.aspx"><h3> LogOut </h3></asp:LinkButton>
+                </li>
+                <li>
+                    <h5>Welcome: </h5>
+                    <asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label>
+                </li>
+                <li>
+                    
+                    <marquee direction="left" scrollamount="5">
+
+             <asp:Label ID="lblNews" runat="server" Text="Label"></asp:Label>
+                         </marquee>
+                </li>
+            </ul>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

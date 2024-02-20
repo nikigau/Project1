@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cadmin.master.cs" Inherits="WebApplication1.Cadmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <link rel="stylesheet" href="style4.css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <h1 class="h1"> Online Student Complaint Handling Portal </h1> 
+    <hr />
+    <form id="form1" runat="server">
+        <div>
+                <ul>
+                    <li>
+                    <asp:LinkButton ID="linkDepart" runat="server" PostBackUrl="~/department.aspx"><h3>Department</h3></asp:LinkButton>
+                    </li>
+                    
+                <li>
+                    <asp:LinkButton ID="linkDepartUser" runat="server" PostBackUrl="~/departuser.aspx"><h3>DepartmentUser</h3></asp:LinkButton>
+                   </li> 
+                <li>
+                    <asp:LinkButton ID="linkReport" runat="server" PostBackUrl="~/report.aspx"><h3>Report</h3></asp:LinkButton>
+                    </li>
+                <li>
+                    <asp:LinkButton ID="linkUser" runat="server" PostBackUrl="~/news.aspx"><h3>News</h3></asp:LinkButton>
+                    </li>
+                <li>
+                     <li>
+                    <asp:LinkButton ID="linkLogout" runat="server" PostBackUrl="~/default.aspx"><h3>Logout</h3></asp:LinkButton>
+                    </li>
+                <li>
+                    <h5>Welcome: </h5>
+                    <asp:Label ID="lblClg" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblCode" runat="server" Text="Label" Visible="false"></asp:Label>
+                    </li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <p>
+                    <br />
+                </p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
